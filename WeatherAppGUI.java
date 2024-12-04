@@ -17,7 +17,7 @@ public class WeatherAppGUI extends JFrame{
         super("Weather-App");
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(450, 650);
+        setSize(850, 650);
 
         setLocationRelativeTo(null);
         setLayout(null);
@@ -30,7 +30,7 @@ public class WeatherAppGUI extends JFrame{
     private void addGUIComponents(){
         //search field
         JTextField searchTextField= new JTextField();
-        searchTextField.setBounds(15,25,350,30);
+        searchTextField.setBounds(15,50,750,30);
 
         searchTextField.setFont(new Font("Dialog", Font.PLAIN, 20));
 
@@ -44,7 +44,7 @@ public class WeatherAppGUI extends JFrame{
         add(weatherConditionImage);
 
         //temperature text
-        JLabel temperatureText= new JLabel("10 C");
+        JLabel temperatureText= new JLabel("Temperature");
         temperatureText.setBounds(0, 350,450, 54);
         temperatureText.setFont(new Font("Dialog", Font.BOLD, 48));
 
@@ -55,10 +55,10 @@ public class WeatherAppGUI extends JFrame{
         add(temperatureText);
 
         //Weather Description
-        JLabel weatherConditionDescription= new JLabel("Cloudy");
+        JLabel weatherConditionDescription= new JLabel("Weather");
         weatherConditionDescription.setBounds(0, 420, 450, 44);
 
-        weatherConditionDescription.setFont(new Font("Dialog", Font.BOLD, 20));
+        weatherConditionDescription.setFont(new Font("Dialog", Font.BOLD, 18));
 
         weatherConditionDescription.setHorizontalAlignment(SwingConstants.CENTER);
 
@@ -66,32 +66,32 @@ public class WeatherAppGUI extends JFrame{
 
         //humidity image
         JLabel humidityImage= new JLabel(loadImage("imgs/humidity.png"));
-        humidityImage.setBounds(15,500,74,66);
+        humidityImage.setBounds(500,170,74,66);
         add(humidityImage);
 
         //humidity text
         JLabel humidityText= new JLabel("<html><b>Humidity</b>\n100%</html>");
-        humidityText.setBounds(90,500,85,55);
-        humidityText.setFont(new Font("Dialog",Font.PLAIN, 14));
+        humidityText.setBounds(600,185,95,55);
+        humidityText.setFont(new Font("Dialog",Font.PLAIN, 18));
         add(humidityText);
 
         //windspeed image
         JLabel windspeedImage= new JLabel(loadImage("imgs/windspeed.png"));
-        windspeedImage.setBounds(220,500,74,66);
+        windspeedImage.setBounds(500,350,74,66);
         add(windspeedImage);
 
         //windspeed text
         JLabel windspeedText= new JLabel("<html><b>Wind-Speed</b>\n10km/h</html>");
-        windspeedText.setBounds(310, 500, 85, 55);
-        windspeedText.setFont(new Font("Dialog", Font.PLAIN, 14));
+        windspeedText.setBounds(600,350,105,55);
+        windspeedText.setFont(new Font("Dialog", Font.PLAIN, 18));
         add(windspeedText);
 
         //search button
-        JButton searchButton= new JButton(loadImage("imgs/search.png"));
+        JButton searchButton= new JButton(loadImage("imgs/pngtree-vector-search-icon-png-i.jpg"));
 
         //cursor appearance
         searchButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        searchButton.setBounds(375, 25, 47, 30);
+        searchButton.setBounds(775, 50, 35, 30);
         searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
