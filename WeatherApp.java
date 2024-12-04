@@ -21,11 +21,12 @@ public class WeatherApp {
         double longitude= (double) location.get("longitude");
 
         //Build URL using Location
-        String urlString= "https://api.open-meteo.com/v1/forecast?latitude="+latitude+"+longitude="+longitude+"&hourly=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&timezone=GMT";
+        String urlString = "https://api.open-meteo.com/v1/forecast?"+"latitude=" + latitude+"&longitude="+longitude +"&hourly=temperature_2m,relativehumidity_2m,weather_code,windspeed_10m&timezone=America%2FLos_Angeles";
 
         try{
             HttpURLConnection conn= fetchApiResponse(urlString);
 
+            assert conn != null;
             if(conn.getResponseCode()!=200){
                 System.out.println("Error connecting");
                 return null;
@@ -53,7 +54,7 @@ public class WeatherApp {
             JSONArray temperatureData= (JSONArray) hourly.get("temperature_2m");
             double temperature= (double) temperatureData.get(index);
 
-            JSONArray weatherCode=(JSONArray) hourly.get("weathercode");
+            JSONArray weatherCode=(JSONArray) hourly.get("weather_code");
             String weatherCondition= convertWeatherCode((long) weatherCode.get(index));
 
             JSONArray relativeHumidity= (JSONArray) hourly.get("relativehumidity_2m");
