@@ -37,7 +37,15 @@ public class WeatherAppGUI extends JFrame{
          searchButton.setBounds(375, 25, 47, 30);
 
          add(searchButton);
-         
+
+         //Weather Image
+        JLabel weatherConditionImage= new JLabel(loadImage("imgs/cloudy.png"));
+
+        weatherConditionImage.setBounds(0, 125, 450, 217);
+
+        add(weatherConditionImage);
+
+        
     }
 
     // Images for GUI
