@@ -45,7 +45,48 @@ public class WeatherAppGUI extends JFrame{
 
         add(weatherConditionImage);
 
-        
+        //temperature text
+        JLabel temperatureText= new JLabel("10 C");
+        temperatureText.setBounds(0, 350,450, 54);
+        temperatureText.setFont(new Font("Dialog", Font.BOLD, 48));
+
+        //center-align
+        temperatureText.setHorizontalAlignment(SwingConstants.CENTER
+        );
+
+        add(temperatureText);
+
+        //Weather Description
+        JLabel weatherConditionDescription= new JLabel("Cloudy");
+        weatherConditionDescription.setBounds(0, 420, 450, 44);
+
+        weatherConditionDescription.setFont(new Font("Dialog", Font.BOLD, 20));
+
+        weatherConditionDescription.setHorizontalAlignment(SwingConstants.CENTER);
+
+        add(weatherConditionDescription);
+
+        //humidity image
+        JLabel humidityImage= new JLabel(loadImage("imgs/humidity.png"));
+        humidityImage.setBounds(15,500,74,66);
+        add(humidityImage);
+
+        //humidity text
+        JLabel humidityText= new JLabel("<html><b>Humidity</b>\n100%</html>");
+        humidityText.setBounds(90,500,85,55);
+        humidityText.setFont(new Font("Dialog",Font.PLAIN, 14));
+        add(humidityText);
+
+        //windspeed image
+        JLabel windspeedImage= new JLabel(loadImage("imgs/windspeed.png"));
+        windspeedImage.setBounds(220,500,74,66);
+        add(windspeedImage);
+
+        //windspeed text
+        JLabel windspeedText= new JLabel("<html><b>Wind-Speed</b>\n10km/h</html>");
+        windspeedText.setBounds(310, 500, 85, 55);
+        windspeedText.setFont(new Font("Dialog", Font.PLAIN, 14));
+        add(windspeedText);
     }
 
     // Images for GUI
