@@ -29,15 +29,6 @@ public class WeatherAppGUI extends JFrame{
 
         add(searchTextField);
 
-        //search button
-        JButton searchButton= new JButton(loadImage("imgs/search.png"));
-
-        //cursor appearance
-         searchButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-         searchButton.setBounds(375, 25, 47, 30);
-
-         add(searchButton);
-
          //Weather Image
         JLabel weatherConditionImage= new JLabel(loadImage("imgs/cloudy.png"));
 
@@ -87,6 +78,15 @@ public class WeatherAppGUI extends JFrame{
         windspeedText.setBounds(310, 500, 85, 55);
         windspeedText.setFont(new Font("Dialog", Font.PLAIN, 14));
         add(windspeedText);
+
+        //search button
+        JButton searchButton= new JButton(loadImage("imgs/search.png"));
+
+        //cursor appearance
+        searchButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        searchButton.setBounds(375, 25, 47, 30);
+
+        add(searchButton);
     }
 
     // Images for GUI

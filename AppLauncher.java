@@ -9,6 +9,5 @@ public class AppLauncher {
             }
         });
 
-        System.out.println(WeatherApp.getLocationData("Delhi"));
     }
 }
